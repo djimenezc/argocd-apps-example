@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: echo-test
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: argocd-test
+    name: kay-test
+  project: default
+
+  syncPolicy:
+    automated:
+      prune: true
+      allowEmpty: true
+      selfHeal: true
+  source:
+    chart: echo-server
+    repoURL: https://ealenn.github.io/charts
+    targetRevision: ^0.5.0
+    helm:
+      releaseName: echo
+      values: |
+        ingress:
+          ingressClassName: systeminternalingress
+          enabled: true
+          hosts:
+            - host: echo.argocd-test.vqpn.net
+              paths: 
+                - /
