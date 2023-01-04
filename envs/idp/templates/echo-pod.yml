@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     namespace: argocd-test
-    name: idp
+    name: in-cluster
   project: default
 
   syncPolicy:
