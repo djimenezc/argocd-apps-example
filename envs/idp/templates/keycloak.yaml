@@ -27,6 +27,7 @@ spec:
           annotations:
             kubernetes.io/ingress.class: nginx
           hostname: "keycloak.ivas-idp.de"
+        clusterDomain: "keycloak.ivas-idp.de"
         rbac:
           create: true
         auth:
