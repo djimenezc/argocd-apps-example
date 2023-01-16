@@ -24,9 +24,9 @@ spec:
       releaseName: echo
       values: |
         ingress:
-          ingressClassName: systeminternalingress
+          ingressClassName: nginx
           enabled: true
           hosts:
-            - host: echo.argocd-test.vqpn.net
+            - host: echo.ivas-sandbox.de
               paths: 
                 - /
