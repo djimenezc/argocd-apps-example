@@ -55,6 +55,10 @@ spec:
             value: "keycloak.ivas-idp.de"
           - name: KC_HOSTNAME_STRICT
             value: "false"
+          - name: BITNAMI_DEBUG
+            value: "true"
+          - name: KC_HOSTNAME_STRICT_HTTPS
+            value: "false"
 
         postgresql:
           auth:
