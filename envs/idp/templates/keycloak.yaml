@@ -1,0 +1,56 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: keycloak
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: keycloak
+    server: 'https://kubernetes.default.svc'
+  project: idp
+  syncPolicy:
+    automated:
+      prune: false
+      allowEmpty: true
+      selfHeal: true
+  source:
+    chart: keycloak
+    repoURL: https://charts.bitnami.com/bitnami
+    targetRevision: 13.0.1
+    helm:
+      releaseName: keycloak
+      values: |
+        ingress:
+          enabled: true
+          annotations:
+            kubernetes.io/ingress.class: nginx
+          hostname: "keycloak.ivas-idp.de"
+        rbac:
+          create: true
+        auth:
+          adminUser: keycloak
+          adminPassword: keycloak
+          managementUser: david
+          managementPassword: david
+        cache:
+          enabled: false
+        proxy: edge
+        resources:
+          requests:
+            cpu: 0.5
+            memory: 512Mi
+          limits:
+            cpu: 2
+            memory: 2Gi
+
+        extraEnvVars:
+          - name: KEYCLOAK_PRODUCTION
+            value: "true"
+          - name: KC_HOSTNAME
+            value: "keycloak.ivas-idp.de"
+
+        postgresql:
+          auth:
+            password: keycloak
