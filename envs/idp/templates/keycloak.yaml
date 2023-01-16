@@ -29,7 +29,6 @@ spec:
             nginx.ingress.kubernetes.io/upstream-vhost: keycloak.ivas-idp.de
             nginx.ingress.kubernetes.io/configuration-snippet: |
               proxy_set_header Host keycloak.ivas-idp.de;
-              proxy_set_header X-Forwarded-Proto: https;
           hostname: "keycloak.ivas-idp.de"
         clusterDomain: "keycloak.ivas-idp.de"
         rbac:
