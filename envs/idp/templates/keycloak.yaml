@@ -26,7 +26,6 @@ spec:
           enabled: true
           annotations:
             kubernetes.io/ingress.class: nginx
-            nginx.ingress.kubernetes.io/upstream-vhost: keycloak.ivas-idp.de
             nginx.ingress.kubernetes.io/configuration-snippet: |
               proxy_set_header Host keycloak.ivas-idp.de;
           hostname: "keycloak.ivas-idp.de"
