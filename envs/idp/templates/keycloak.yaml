@@ -57,6 +57,8 @@ spec:
             value: "false"
           - name: KC_HOSTNAME_STRICT_HTTPS
             value: "true"
+          - name: KC_PROXY
+            value: "edge"
 
         postgresql:
           auth:
