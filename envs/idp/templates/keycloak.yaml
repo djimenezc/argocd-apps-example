@@ -61,6 +61,8 @@ spec:
             value: "edge"
           - name: KC_LOG_LEVEL
             value: "DEBUG"
+          - name: KEYCLOAK_URL
+            value: "https://keycloak.ivas-idp.de/"
 
         postgresql:
           auth:
