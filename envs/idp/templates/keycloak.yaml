@@ -18,7 +18,7 @@ spec:
   source:
     chart: keycloak
     repoURL: https://charts.bitnami.com/bitnami
-    targetRevision: 12.1.2
+    targetRevision: 12.1.5
     helm:
       releaseName: keycloak
       values: |
@@ -83,3 +83,12 @@ spec:
         postgresql:
           auth:
             password: keycloak
+        
+        keycloakConfigCli:
+          enabled: true
+          configuration:
+            realm1.json: |
+              {
+                "realm": "realm1",
+                "clients": []
+              }
