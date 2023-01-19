@@ -22,4 +22,6 @@ spec:
     helm:
       releaseName: haproxy
       values: |
-        
+        ingress:
+          enabled: true
+          ingressClassName: haproxy
