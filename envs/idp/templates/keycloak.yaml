@@ -65,7 +65,10 @@ spec:
             value: "https://keycloak.ivas-idp.de/"
           - name: KEYCLOAK_EXTRA_ARGS
             value: "--auto-build"
-
+        
+        metrics:
+          enabled: true
+        
         postgresql:
           auth:
             password: keycloak
