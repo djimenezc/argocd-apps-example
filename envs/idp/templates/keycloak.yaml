@@ -39,7 +39,7 @@ spec:
           managementPassword: david
         cache:
           enabled: false
-        proxy: edge
+        proxy: passthrough
         resources:
           requests:
             cpu: 0.5
@@ -67,7 +67,7 @@ spec:
           - name: KC_HOSTNAME_STRICT_HTTPS
             value: "true"
           - name: KC_PROXY
-            value: "edge"
+            value: "passthrough"
           - name: KC_LOG_LEVEL
             value: "DEBUG"
           - name: KEYCLOAK_URL
