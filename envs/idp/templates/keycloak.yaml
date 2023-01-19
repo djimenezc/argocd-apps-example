@@ -30,6 +30,7 @@ spec:
             nginx.ingress.kubernetes.io/cors-allow-credentials: "true"
             nginx.ingress.kubernetes.io/cors-allow-origin: "https://keycloak.ivas-idp.de"
             nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE, PATCH
+            nginx.ingress.kubernetes.io/cors-allow-headers: Content-Type, authorization
           hostname: "keycloak.ivas-idp.de"
         clusterDomain: "keycloak.ivas-idp.de"
         rbac:
