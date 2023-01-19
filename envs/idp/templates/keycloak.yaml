@@ -25,15 +25,7 @@ spec:
         ingress:
           enabled: true
           annotations:
-            kubernetes.io/ingress.class: nginx
-            nginx.ingress.kubernetes.io/configuration-snippet: |
-              proxy_set_header Host $host;
-              proxy_set_header X-Forwarded-Proto: https;
-            nginx.ingress.kubernetes.io/enable-cors: "true"
-            nginx.ingress.kubernetes.io/cors-allow-credentials: "true"
-            nginx.ingress.kubernetes.io/cors-allow-origin: "https://keycloak.ivas-idp.de,http://keycloak.ivas-idp.de"
-            nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS, DELETE, PATCH
-            nginx.ingress.kubernetes.io/cors-allow-headers: Content-Type, authorization, Host
+            kubernetes.io/ingress.class: haproxy
           hostname: "keycloak.ivas-idp.de"
         clusterDomain: "keycloak.ivas-idp.de"
         rbac:

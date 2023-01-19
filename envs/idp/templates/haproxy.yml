@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: haproxy
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: haproxy
+    server: 'https://kubernetes.default.svc'
+  project: idp
+  syncPolicy:
+    automated:
+      prune: true
+      allowEmpty: true
+      selfHeal: true
+  source:
+    chart: keycloak
+    repoURL: haproxytech.github.io/helm-charts
+    targetRevision: 1.17.5
+    helm:
+      releaseName: haproxy
+      values: |
+        
