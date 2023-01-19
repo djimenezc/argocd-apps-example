@@ -76,7 +76,7 @@ spec:
             value: "DEBUG"
           - name: PROXY_ADDRESS_FORWARDING
             value: "true"
-          -name: KEYCLOAK_SSLVERIFY
+          - name: KEYCLOAK_SSLVERIFY
             value: "false"
 
         metrics:
