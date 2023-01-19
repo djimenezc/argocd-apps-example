@@ -72,7 +72,7 @@ spec:
             value: "https://keycloak.ivas-idp.de/"
           - name: KEYCLOAK_EXTRA_ARGS
             value: "--auto-build"
-          - PROXY_ADDRESS_FORWARDING:
+          - name: PROXY_ADDRESS_FORWARDING:
             value: "true"
         
         metrics:
