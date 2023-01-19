@@ -66,14 +66,10 @@ spec:
             value: "false"
           - name: KC_HOSTNAME_STRICT_HTTPS
             value: "true"
-          - name: KC_PROXY
-            value: "edge"
           - name: KC_LOG_LEVEL
             value: "DEBUG"
           - name: KEYCLOAK_URL
-            value: "https://keycloak.ivas-idp.de/"
-          - name: KEYCLOAK_EXTRA_ARGS
-            value: "--auto-build"
+            value: "https://keycloak.ivas-idp.de"
           - name: PROXY_ADDRESS_FORWARDING
             value: "true"
 
