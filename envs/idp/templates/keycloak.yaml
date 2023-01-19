@@ -76,6 +76,8 @@ spec:
             value: "--auto-build"
           - name: PROXY_ADDRESS_FORWARDING
             value: "true"
+          - name: KEYCLOAK_ENABLE_HTTPS
+            value: "true"
 
         metrics:
           enabled: true
