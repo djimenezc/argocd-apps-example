@@ -60,7 +60,7 @@ spec:
           - name: KC_PROXY
             value: "edge"
          - name: KEYCLOAK_LOGLEVEL
-            value: DEBUG
+            value: "DEBUG"
 
         postgresql:
           auth:
