@@ -89,13 +89,9 @@ spec:
         keycloakConfigCli:
           enabled: true
           configuration:
-            realm1.json: |
+            savi.json: |
               {
                 "enabled": true,
                 "realm": "Savi",
-                "clients": [],
-                "users" : [
-                  {"username" : "abc@mycorp.com", "enabled" : true, "email" : "abc@mycorp.com", "attributes" : {"roles" : [ "admin" ]}},
-                  {"username" : "xyz@mycorp.com", "enabled" : true, "email" : "xyz@mycorp.com", "attributes" : {"roles" : [ "admin" ]}}
-]               ]
+                "clients": []
               }
