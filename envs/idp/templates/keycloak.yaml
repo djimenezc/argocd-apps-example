@@ -66,8 +66,6 @@ spec:
         extraEnvVars:
           - name: KEYCLOAK_PRODUCTION
             value: "true"
-          - name: KC_HOSTNAME
-            value: "keycloak.ivas-idp.de"
           - name: KC_HOSTNAME_URL
             value: "https://keycloak.ivas-idp.de"
           - name: KC_HOSTNAME_STRICT
