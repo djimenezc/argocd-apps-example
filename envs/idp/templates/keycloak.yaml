@@ -50,7 +50,7 @@ spec:
 
         podSecurityContext:
           enabled: true
-          fsGroup: 1001
+          fsGroup: 0
 
         containerSecurityContext:
           enabled: true
