@@ -49,10 +49,12 @@ spec:
             memory: 2Gi
 
         podSecurityContext:
-          enabled: false
+          enabled: true
+          runAsUser: 0
 
         containerSecurityContext:
-          enabled: false
+          enabled: true
+          runAsUser: 0
           runAsNonRoot: false
 
         extraEnvVars:
@@ -74,7 +76,7 @@ spec:
             value: "--auto-build"
           - name: PROXY_ADDRESS_FORWARDING:
             value: "true"
-        
+
         metrics:
           enabled: true
 
