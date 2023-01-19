@@ -17,7 +17,7 @@ spec:
       selfHeal: true
   source:
     chart: keycloak
-    repoURL: haproxytech.github.io/helm-charts
+    repoURL: https://haproxytech.github.io/helm-charts
     targetRevision: 1.17.5
     helm:
       releaseName: haproxy
