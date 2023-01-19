@@ -50,7 +50,7 @@ spec:
 
         extraEnvVars:
           - name: KEYCLOAK_PRODUCTION
-            value: "true"
+            value: "false"
           - name: KC_HOSTNAME
             value: "keycloak.ivas-idp.de"
           - name: KC_HOSTNAME_STRICT
