@@ -48,6 +48,13 @@ spec:
             cpu: 2
             memory: 2Gi
 
+        podSecurityContext:
+          enabled: false
+
+        containerSecurityContext:
+          enabled: false
+          runAsNonRoot: false
+
         extraEnvVars:
           - name: KEYCLOAK_PRODUCTION
             value: "true"
@@ -65,10 +72,10 @@ spec:
             value: "https://keycloak.ivas-idp.de/"
           - name: KEYCLOAK_EXTRA_ARGS
             value: "--auto-build"
-        
+
         metrics:
           enabled: true
-        
+
         postgresql:
           auth:
             password: keycloak
