@@ -7,7 +7,7 @@ spec:
   destination:
     namespace: kube-system
     name: kay-test
-  project: dev-aws-project
+  project: idp
   source:
     chart: ingress-nginx
     repoURL: https://kubernetes.github.io/ingress-nginx
