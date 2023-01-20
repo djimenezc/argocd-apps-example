@@ -6,6 +6,9 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
+  clusterResourceWhitelist:
+    - group: "*"
+      kind: "*"
   destination:
     namespace: ingress-nginx
     name: in-cluster
