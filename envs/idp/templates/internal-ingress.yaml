@@ -51,14 +51,14 @@ spec:
               https: http
 
             annotations:
-              external-dns.alpha.kubernetes.io/hostname: "*.vqpn.net"
+              external-dns.alpha.kubernetes.io/hostname: "*.ivas-idp.de"
               service.beta.kubernetes.io/aws-load-balancer-alpn-policy: None
               service.beta.kubernetes.io/aws-load-balancer-backend-protocol: tcp
               service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: "true"
               service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: ip
               service.beta.kubernetes.io/aws-load-balancer-proxy-protocol: "*"
               service.beta.kubernetes.io/aws-load-balancer-scheme: internal
-              service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:eu-west-1:155136788633:certificate/3d0dc28f-2fef-4dd6-8643-891c077a5dbf,arn:aws:acm:eu-west-1:155136788633:certificate/7d019724-7bff-4377-97b9-81e754bff987,arn:aws:acm:eu-west-1:155136788633:certificate/f1a38499-1a67-41d7-8f60-3eed2016c2a0,arn:aws:acm:eu-west-1:155136788633:certificate/3eec19a3-1c6c-40f4-a1a6-d8a3d492453f,arn:aws:acm:eu-west-1:155136788633:certificate/1e90ea0c-a747-4752-8d25-7fe3d88147ed,arn:aws:acm:eu-west-1:155136788633:certificate/f97b5ccd-5982-4520-aeb7-e53755bb034d,arn:aws:acm:eu-west-1:155136788633:certificate/d700f7b2-78bd-4998-9b52-5f6e5ad7acf0
+              service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:eu-west-1:943239102098:certificate/106d832e-8bcb-4b7a-a6a5-c3225c812e07
               service.beta.kubernetes.io/aws-load-balancer-ssl-negotiation-policy: "ELBSecurityPolicy-TLS-1-2-2017-01"
               service.beta.kubernetes.io/aws-load-balancer-ssl-ports: https
               service.beta.kubernetes.io/aws-load-balancer-target-group-attributes: "proxy_protocol_v2.enabled=true,deregistration_delay.timeout_seconds=120,deregistration_delay.connection_termination.enabled=true"
