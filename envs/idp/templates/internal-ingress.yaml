@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     namespace: ingress-nginx
-    name: 'https://kubernetes.default.svc'
+    name: in-cluster
   project: idp
   syncPolicy:
     automated:
